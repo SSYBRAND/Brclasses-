@@ -1,0 +1,579 @@
+<!DOCTYPE html>       
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.R Academy & Classes</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+    .menu-icon {
+        cursor: pointer;
+    }
+    .fullscreen-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    .menu-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1><font color=aqua><strong>BRAIN STORM<br></font><font color=orange>ACADEMY Ltd.</strong></h1></font>
+    <div class="menu-icon" onclick="openFullscreenMenu()">☰</div>
+</div>
+
+<div class="fullscreen-menu" id="fullscreenMenu">
+    <div class="menu-content">
+        <span class="close-btn" onclick="closeFullscreenMenu()">×</span>
+        <h2><font color=red><strong>Menu</strong></h2></font>
+        <ul>
+            <li><b><font color=red>Details</b>:</font>&nbsp;<a href="https://community.eonnext.com/attachment.php?attachmentid=2248">Batch Cost List as per class.</a></li><br></br>
+            <li><b><font color=red>Complaint Problems</b>:</font> &nbsp;<a href="mailto: ssybrand58@gmail.com">Click to Mail Us. </a></li><br></br>
+            <li><b><font color=red>Branch Address</b>:</font>&nbsp;<b>Shantipuram, Behind Nand sweet House Pin Code -211013</b>&nbsp;&nbsp;<a href="https://www.google.com/maps/place/Nand+Sweets,+26,+Shantipuram+Rd,+Sector-E,+Shantipuram,+Phaphamau,+Uttar+Pradesh+211013/@25.5287605,81.85375,17z/data=!4m6!3m5!1s0x399aca1d6b4ee531:0xa1adafbc5f9e2a15!8m2!3d25.5287605!4d81.85375!16s%2Fg%2F11c3tpw9jk">View On Google Map &nbsp; 🗺️</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function openFullscreenMenu() {
+        document.getElementById("fullscreenMenu").style.display = "flex";
+    }
+
+    function closeFullscreenMenu() {
+        document.getElementById("fullscreenMenu").style.display = "none";
+    }
+</script>
+<br>
+<Center>
+  <html lang="en">  
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #333;
+}
+</style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slide">
+    <img src="https://api.examgurooji.in/UploadedFiles/Advertisement/17-Advertisement-283.png" alt="Slide 1">
+  </div>
+  <div class="slide">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSgJdCkWU4_LHa9CDb4SqT1RsMSkwK3gHiIi_wermMvoMfHOuW-rzk31Y&s=10" alt="Slide 2">
+  </div>
+  <div class="slide">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDMEGUwJGek9ndQakj4djLQfdb3FjiQa9D8DOJwKCpjT0BEThMZm6Y42an&s=10" alt="Slide 3">
+  </div>
+</div>
+
+<div class="dots">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+// Automatic slideshow
+let slideInterval = setInterval(plusSlidesAuto, 3000);
+
+function plusSlidesAuto() {
+  plusSlides(1);
+}
+</script>
+</center>
+<br></br>
+<center>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.notification-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50px; /* Adjust as needed */
+  padding: 10px 40px; /* Increased padding to accommodate the bell icon */
+  font-size: 16px;
+  cursor: pointer;
+  position: relative; /* Required for positioning the bell icon */
+}
+
+.notification-button::before {
+  content: '\1F514'; /* Bell icon unicode */
+  font-size: 20px;
+  margin-right: 10px; /* Spacing between icon and text */
+  animation: blink 0.5s infinite alternate; /* Faster blink animation for the bell icon */
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.notification-button:hover {
+  background-color: darkred; /* Darker color on hover */
+}
+
+.notification-button:active {
+  background-color: maroon; /* Even darker color when clicked */
+}
+</style>
+</head>
+<body>
+
+<button class="notification-button" onclick="openNewPage()">Urgent Announcement</button>
+
+<script>
+function openNewPage() {
+  // Your code to open a new page goes here
+  window.open("https://ssybrand.github.io/Urgent-announcement-br-class-/", "_blank");
+}
+</script>
+</center>
+<br></br>
+<center><font color=red size=4><strong>Advertisement</strong></font>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f158a43b675bf655b562eb00ab08f0cd',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/f158a43b675bf655b562eb00ab08f0cd/invoke.js"></scr' + 'ipt>');
+</script>
+</center>
+<br>
+<center><h1>Dashboard</h1></center>
+ 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .button {
+    width: 160px; /* Adjusted width */
+    height: 50px; /* Adjusted height */
+    background-color: #007bff;
+    color: #fff;
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .section-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .section {
+    width: 160px; /* Adjusted width */
+    height: 50px; /* Adjusted height */
+    background-color: #007bff;
+    color: #fff;
+    margin: 0 10px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .section:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="button-container">
+    <button class="button" onclick="openLink('live-test.html')">
+      Live Test
+    </button>
+
+    <button class="button" onclick="openLink('live-class.html')">
+      Join Class
+    </button>
+
+    <button class="button" onclick="openLink('class-notes.html')">
+      Class Notes
+    </button>
+  </div> 
+
+  <div class="section-container">
+    <button class="section" onclick="openLink('attendance.html')">Attendance</button>
+    <button class="section" onclick="openLink('homework.html')">Homework</button>
+    <button class="section" onclick="openLink('results.html')">Results</button>
+  </div>
+</div>
+
+<div class="section-container">
+    <button class="section" onclick="openLink('attendance.html')">Holiday Schedule</button>
+    <button class="section" onclick="openLink('homework.html')">Study Material</button>
+    <button class="section" onclick="openLink('results.html')">Time table</button>
+  </div>
+</div>
+
+<div class="section-container">
+    <button class="section" onclick="openLink('attendance.html')">Newspaper</button>
+    <button class="section" onclick="openLink('homework.html')">NDA Notes</button>
+    <button class="section" onclick="openLink('results.html')">Live Solution</button>
+  </div>
+</div>
+
+<div class="section-container">
+    <button class="section" onclick="openLink('attendance.html')">Doubt</button>
+    <button class="section" onclick="openLink('homework.html')">Addmission Result</button>
+    <button class="section" onclick="openLink('tele:+917860571397')">Contact Us</button>
+  </div>
+</div>
+
+<script>
+function openLink(url) {
+  window.open(url, "_blank");
+}
+</script>
+<br></br>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .batch {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .batch h2 {
+        margin-top: 0;
+    }
+    .contact-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 15px;
+        cursor: pointer;
+    }
+    .thumbnail {
+        width: 100px;
+        height: 100px;
+        background-color: #f0f0f0;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+<h2><font color=red><b>&nbsp;&nbsp;&nbsp;Upcoming Events</b> </font>2024-25 ❣️</h2>
+<div id="batchContainer"></div>
+
+<script>
+    const newBatches = [
+        { name: "Class 10 & 11,12  (CBSE)", date: "April 01, 2024", thumbnail: "https://upanganwadibharti.in/assets/img/blinker.gif" },
+        { name: "NDA (II) 2024 batch", date: "April 5, 2024", thumbnail: "https://i.ibb.co/PYD13bk/newicon.gif" },
+        { name: "Polytechnic & Diploma Entrance 2024", date: "April 10, 2024", thumbnail: "https://i.ibb.co/PYD13bk/newicon.gif" }
+    ];
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const batchContainer = document.getElementById('batchContainer');
+        newBatches.forEach(batch => {
+            const batchDiv = document.createElement('div');
+            batchDiv.classList.add('batch');
+            const h2 = document.createElement('h2');
+            h2.textContent = batch.name;
+            const p = document.createElement('p');
+            p.textContent = "Starts on: " + batch.date;
+            const thumbnail = document.createElement('div');
+            thumbnail.classList.add('thumbnail');
+            // Set background image for thumbnail (replace 'url' with actual path)
+            thumbnail.style.backgroundImage = `url(${batch.thumbnail})`;
+            const contactBtn = document.createElement('button');
+            contactBtn.classList.add('contact-btn');
+            contactBtn.textContent = "Register Now  🚨";
+            // Add click event to call the contact number
+            contactBtn.addEventListener("click", function() {
+                window.location.href = "tel:+919336870697";
+            });
+            batchDiv.appendChild(h2);
+            batchDiv.appendChild(p);
+            batchDiv.appendChild(thumbnail);
+            batchDiv.appendChild(contactBtn);
+            batchContainer.appendChild(batchDiv);
+        });
+    });
+</script>
+<br></br>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    #videoContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    iframe {
+        width: 560px;
+        height: 315px;
+        margin: 10px;
+    }
+    @media (max-width: 600px) {
+        iframe {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+<center><font color=blue size=5><strong>Our Free Classes </strong></center>
+<div id="videoContainer"></div>
+
+<script>
+    const videoUrls = [
+        "https://www.youtube.com/embed/k2_dmMdPlLU?si=-hQLE9D516mlrEc8",
+        "https://www.youtube.com/embed/j6uIbtyh0WY?si=O2YMKKL1ID2FTXG3",
+        "https://www.youtube.com/embed/cCdF-LrQQVU?si=24XHLOkqGb1sodT3"
+    ];
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const videoContainer = document.getElementById('videoContainer');
+        videoUrls.forEach(url => {
+            const iframe = document.createElement('iframe');
+            iframe.src = url;
+            iframe.width = "560";
+            iframe.height = "315";
+            iframe.frameborder = "0";
+            iframe.allowfullscreen = true;
+            videoContainer.appendChild(iframe);
+        });
+    });
+</script>
+
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    footer {
+        background-color: blue;
+        color: white;
+        padding: 20px;
+    }
+    .slide {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    img {
+        scroll-snap-align: center;
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+    .teacher-info {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<footer>
+  <center><font color=orange size=5><b> 🩷&nbsp; <u>Our faculties</u>&nbsp;🩷</b></center><br>
+    <div class="slide">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUNNSQTguLltG1hcPQuEL8b7mNwgYyQW9KevjUYVOJhs56D5CMoLfe2odD&s=10" alt="Image 1">
+            <div class="teacher-info">Math Expert 💓</div>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqam95yW3VmQBP_Tcksl8u38rEeGTIpSbZ9g&usqp=CAU" alt="Image 2">
+            <div class="teacher-info">Physics KinG 👑</div>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1oXsD0cRYHiH82uG7Wp9MCyt028cLVvOEOQ&usqp=CAU" alt="Image 3">
+            <div class="teacher-info">KinG of Chemistry ❣️</div>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVQANUxwojYp7Fdi_dZtzaiKENSNkVZ29paoRP_9Sog&s" alt="Image 4">
+            <div class="teacher-info">Biology Queen 👑</div>
+        </div>
+        <!-- Add more images and introductions here if needed -->
+    </div>
+    <br></br>
+    <center><font color=Red><b>Disclaimer 😴</b></center><br></font>
+    <center><font color=yellow><strong>Avlaible Only on B.R Academy Center,So <br>Why are u waiting Apply Now ,<br>for Your favourite batch  Session 2024-25 💓💓</strong></center>
+</font>
+<br></br>
+ <img src="https://i.ibb.co/PYD13bk/newicon.gif"width="15%"> 
+ <a href="mailto: ssybrand58@gmail.com"><h6><font color=white><i> Click Here to Register through Mail</font></h6></a>
+  <br></br>
+  <hr color=aqua size=5>
+     <center><h5>Design By :- &nbsp; Sattu technologies ❣️</h5></center>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
